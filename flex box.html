@@ -1,0 +1,39 @@
+*Multi-Column Responsive Layout using Flexbox**
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flexbox Layout</title>
+    <style>
+        .container {
+            display: flex;
+            gap: 15px;
+        }
+        .column {
+            flex: 1;
+            background: lightgray;
+            padding: 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h2>Multi-Column Layout</h2>
+
+<div class="container">
+    <div class="column">Column 1</div>
+    <div class="column">Column 2</div>
+    <div class="column">Column 3</div>
+</div>
+
+</body>
+</html>
+```
