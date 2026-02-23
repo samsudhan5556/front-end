@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+            width: 300px;
+            text-align: center;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+
+        button {
+            background: #4facfe;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0077ff;
+        }
+    </style>
+
+    <script>
+        function loginUser() {
+
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if(username !== "" && password !== "") {
+
+                alert("Login Successful!");
+
+                window.location.href = "landing.html";
+
+            } else {
+
+                alert("Please enter username and password");
+
+            }
+        }
+    </script>
+
+</head>
+<body>
+
+    <div class="login-box">
+        <h2>Login</h2>
+
+        <input type="text" id="username" placeholder="Enter Username">
+
+        <input type="password" id="password" placeholder="Enter Password">
+
+        <button onclick="loginUser()">Login</button>
+
+    </div>
+
+</body>
+</html>
